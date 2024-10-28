@@ -7,7 +7,7 @@ class modTransportManagement extends DolibarrModules {
         $this->db = $db;
         $this->numero = 104001; // Unique ID
         $this->rights_class = 'transportmanagement';
-        $this->family = "financial";
+        $this->family = "crm"; // Set the family to CRM
         $this->name = preg_replace('/^mod/i', '', get_class($this));
         $this->description = "Module for Transport Management";
         $this->version = '1.0';
@@ -41,7 +41,7 @@ class modTransportManagement extends DolibarrModules {
         $r = 0;
         // Main menu entry
         $this->menu[$r] = array(
-            'fk_menu' => 'fk_mainmenu=compta',
+            'fk_menu' => 'fk_mainmenu=crm',
             'type' => 'top',
             'titre' => 'Transport Management',
             'mainmenu' => 'transportmanagement',
