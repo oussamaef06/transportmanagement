@@ -12,7 +12,7 @@ class modTransportManagement extends DolibarrModules {
         $this->description = "Module for Transport Management";
         $this->version = '1.0';
         $this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
-        $this->picto='img/transportmanagement1.png';
+        $this->picto='fa-truck';
         $this->module_parts = array();
         $this->dirs = array('/transportmanagement');
         $this->config_page_url = array("transportmanagement_setup.php@transportmanagement");
