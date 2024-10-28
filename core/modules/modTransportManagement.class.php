@@ -5,14 +5,14 @@ class modTransportManagement extends DolibarrModules {
     function __construct($db) {
         global $langs;
         $this->db = $db;
-        $this->numero = 104001; // Unique ID
+        $this->numero = 104001;
         $this->rights_class = 'transportmanagement';
-        $this->family = "crm"; // Set the family to CRM
+        $this->family = "crm";
         $this->name = preg_replace('/^mod/i', '', get_class($this));
         $this->description = "Module for Transport Management";
         $this->version = '1.0';
         $this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
-        $this->picto='transportmanagement@transportmanagement';
+        $this->picto='img/transportmanagement1.png';
         $this->module_parts = array();
         $this->dirs = array('/transportmanagement');
         $this->config_page_url = array("transportmanagement_setup.php@transportmanagement");
@@ -52,7 +52,8 @@ class modTransportManagement extends DolibarrModules {
             'enabled' => '$conf->transportmanagement->enabled',
             'perms' => '1',
             'target' => '',
-            'user' => 2
+            'user' => 2,
+            'icon' => 'img/transportmanagement'
         );
         $r++;
         // Submenu entry for Drivers
@@ -107,15 +108,11 @@ class modTransportManagement extends DolibarrModules {
     function init($options = '') {
         $sql = array();
 
-        // Add custom initialization SQL queries if needed
-
         return $this->_init($sql, $options);
     }
 
     function remove($options = '') {
         $sql = array();
-
-        // Add custom removal SQL queries if needed
 
         return $this->_remove($sql, $options);
     }
