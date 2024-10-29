@@ -53,7 +53,7 @@ class modTransportManagement extends DolibarrModules {
             'perms' => '1',
             'target' => '',
             'user' => 2,
-            'icon' => 'img/transportmanagement'
+            'icon' => '/custom/transportmanagement/img/transportmanagement.png'
         );
         $r++;
         // Submenu entry for Drivers
